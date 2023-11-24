@@ -12,46 +12,46 @@ async def count():
     l = 85
     n = 0
     if k < k + n:
-        return 1
+        return {"count": 1}
     n += l
     l = 150
     if k < l + n:
-        return 2
+        return {"count": 2}
     n += l
 
     l = 95
     if k < l + n:
-        return 3
+        return {"count": 3}
     n += l
 
     l = 65
     if k < l + n:
-        return 4
+        return {"count": 4}
     n += l
 
     l = 85
     if k < l + n:
-        return 5
+        return {"count": 5}
     n += l
 
     l = 105
     if k < l + n:
-        return 6
+        return {"count": 6}
     n += l
 
     l = 70
     if k < l + n:
-        return 7
+        return {"count": 7}
     n += l
 
     l = 80
     if k < l + n:
-        return 8
+        return {"count": 8}
     n += l
 
     l = 55
     if k < l + n:
-        return 9
+        return {"count": 9}
     n += l
 
     i = 10
@@ -59,9 +59,8 @@ async def count():
     while k >= l + n:
         i += 1
         n += l
-    return i
-
+    return {"count": i}
 
 if __name__ == '__main__':
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="127.0.0.1", port=8003)
